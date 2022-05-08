@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap" rel="stylesheet">    
+    <link rel="stylesheet" href="public/style.css">
+    <title>Books API</title>
+</head>
+<body>
+    <form id="getBooks" class="getBooks">
+        <fieldset class="getBooks__search">
+            <div class="getBooks__search--imgContainer" id="openSearch">
+                <img class="getBooks__search--imgContainer__img" src="assets/magnifying-glass.png" alt="magnifying-glass">
+            </div>
+            <input type="text" class="getBooks__search--field" placeholder="book title..." id="searchBar" autocomplete="off">
+        </fieldset>
+        <input type="submit" class="getBooks__submit" value="search">
+    </form>
+    <main class="mainContent" id="mainContent"></main>
+    <template id="bookTemplate">
+        <div class="bookContainer">
+            <div class="bookContainer--Ps">
+                <img src="" class="bookImage">
+                <h3 class="bookAuthor"></h3>
+            </div>
+            <div class="bookContainer--Texts">
+                <a class="bookTitle" href="" target="_blank"></a>
+                <p class="bookSubtitle"></p>
+                <p class="bookDescription"></p>
+            </div>
+        </div>
+    </template>
+    <script src="script/main.js" type="module"></script>
+</body>
+</html>
