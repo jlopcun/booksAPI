@@ -18,11 +18,14 @@ const GetFunction = async (title) =>{
             getTempEl('Title').textContent = el.title
             getTempEl('Title').href = el.previewLink
             getTempEl('Author').textContent = el.authors || 'autor desconocido';
+            
+            (el.description && el.description.length>250)
+            ?getTempEl('Description').textContent = el.description.substring(0,247).concat('...')
+            :getTempEl('Description').textContent = el.description
+
             getTempEl('Image').src = (el.imageLinks)
             ?el.imageLinks.smallThumbnail
-            :'assets/no_image_found.png'
-            getTempEl('Subtitle').textContent = el.subtitle
-            getTempEl('Description').textContent = el.description
+            :'../assets/no_image_found.png'
             fragment.appendChild(template)
            
         })
@@ -33,3 +36,5 @@ const GetFunction = async (title) =>{
         console.error(err)
     }
 }
+
+
